@@ -9,296 +9,282 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
-.font-orbitron { font-family: 'Orbitron', sans-serif; }
-.hero-bg { background-image: linear-gradient(to right, rgba(0, 26, 77, 0.9), rgba(28, 59, 112, 0.8)), url('https://placehold.co/1920x1080/001a4d/ffffff?text=RSP'); background-size: cover; background-position: center; background-attachment: fixed; }
-.card { background-color: white; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04); }
-.nav-sticky { position: sticky; top: 0; z-index:50; backdrop-filter: blur(10px); background-color: rgba(17,24,39,0.8); box-shadow:0 4px 6px rgba(0,0,0,0.1); }
-.page-content { opacity:0; transform:translateY(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; display:none; }
-.page-content.visible { opacity:1; transform:translateY(0); display:block; }
-.accordion-header { cursor:pointer; transition: background-color 0.3s ease; }
-.accordion-header:hover { background-color:#e5e7eb; }
-.accordion-content { max-height:0; overflow:hidden; transition:max-height 0.5s ease-in-out; }
-.accordion-icon { transition: transform 0.5s ease; }
-.nav-link.active { color:#FBBF24; border-bottom:2px solid #FBBF24; }
+    body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
+    .font-orbitron { font-family: 'Orbitron', sans-serif; }
+    .hero-bg { 
+        background-image: linear-gradient(to right, rgba(0, 26, 77, 0.9), rgba(28, 59, 112, 0.8)), 
+        url('https://placehold.co/1920x1080/001a4d/ffffff?text=ISP');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .card { background-color: white; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+    .card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);}
+    .nav-sticky { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px); background-color: rgba(17, 24, 39, 0.8); box-shadow:0 4px 6px rgba(0,0,0,0.1);}
+    .page-content { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; display: none; }
+    .page-content.visible { opacity:1; transform:translateY(0); display:block; }
+    .accordion-header { cursor:pointer; transition: background-color 0.3s ease; }
+    .accordion-header:hover { background-color:#e5e7eb; }
+    .accordion-content { max-height:0; overflow:hidden; transition:max-height 0.5s ease-in-out; }
+    .accordion-icon { transition: transform 0.5s ease; }
+    .nav-link.active { color: #FBBF24; border-bottom:2px solid #FBBF24; }
+    .modal-bg { display:none; position:fixed; inset:0; background: rgba(0,0,0,0.6); z-index:60; justify-content:center; align-items:center; }
+    .modal-bg.active { display:flex; }
 </style>
 </head>
 <body>
 
 <!-- Hero Section -->
 <header class="hero-bg text-white text-center py-20 md:py-32">
-<div class="container mx-auto px-4">
-<h1 class="text-4xl md:text-6xl font-orbitron font-bold mb-4 tracking-wider">Idaho State Patrol</h1>
-<p class="text-lg md:text-2xl font-light">Standard Operating Procedures Handbook</p>
-</div>
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-6xl font-orbitron font-bold mb-4 tracking-wider">IDAHO STATE PATROL</h1>
+        <p class="text-lg md:text-2xl font-light">Standard Operating Procedures Handbook</p>
+    </div>
 </header>
 
 <!-- Navigation -->
 <nav class="nav-sticky">
-<div class="container mx-auto px-4">
-<div class="flex justify-center items-center h-16 space-x-4 md:space-x-8 text-white">
-<a href="#" class="nav-link py-4" data-target="page-introduction">Introduction</a>
-<a href="#" class="nav-link py-4" data-target="page-sops">SOPs</a>
-<a href="#" class="nav-link py-4" data-target="page-regulations">Regulations</a>
-<a href="#" class="nav-link py-4" data-target="page-codes">Codes</a>
-<a href="#" class="nav-link py-4" data-target="page-coc">COC</a>
-<a href="#" class="nav-link py-4" data-target="page-miranda">Miranda</a>
-</div>
-</div>
+    <div class="container mx-auto px-4">
+        <div class="flex justify-center items-center h-16 space-x-4 md:space-x-8 text-white">
+            <a href="#" class="nav-link py-4" data-target="page-introduction">Introduction</a>
+            <a href="#" class="nav-link py-4" data-target="page-sops">SOPs</a>
+            <a href="#" class="nav-link py-4" data-target="page-regulations">Regulations</a>
+            <a href="#" class="nav-link py-4" data-target="page-codes">Codes</a>
+            <a href="#" class="nav-link py-4" data-target="page-miranda">Miranda</a>
+            <a href="#" class="nav-link py-4" data-target="page-coc">COC</a>
+        </div>
+    </div>
 </nav>
 
 <!-- Main Content -->
 <main class="container mx-auto p-4 md:p-8">
 
-<!-- Introduction -->
-<div id="page-introduction" class="page-content">
-<section id="introduction" class="mb-12">
-<div class="card p-6 md:p-8">
-<h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-4 border-b-2 border-yellow-500 pb-2">Primary Resource Center</h2>
-<p class="text-gray-600 mb-4">This channel is your primary resource for everything required to perform your duties.</p>
-<div class="mt-6 space-y-3">
-<p class="flex items-center"><span class="w-5 h-5 mr-3 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">&#10003;</span> Displays rules, regulations, and procedures.</p>
-<p class="flex items-center"><span class="w-5 h-5 mr-3 bg-red-600 rounded-full flex items-center justify-center text-white font-bold">&#10003;</span> Provides guidance and resources.</p>
-<p class="flex items-center"><span class="w-5 h-5 mr-3 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">&#10003;</span> Self role assignments and responsibility guidelines.</p>
-</div>
-</div>
-</section>
-</div>
+    <!-- Introduction Page -->
+    <div id="page-introduction" class="page-content">
+        <section id="introduction" class="mb-12">
+            <div class="card p-6 md:p-8">
+                <h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-4 border-b-2 border-yellow-500 pb-2">Primary Resource Center</h2>
+                <p class="text-gray-600 mb-4">This channel has been created as your primary resource for everything required to perform your duties as a Trooper within the ISP. Inside, you will find the complete set of operational procedures, department regulations, communication protocols, and standards of professionalism that guide the way we function on a daily basis.</p>
+            </div>
+        </section>
+    </div>
 
-<!-- SOPs -->
-<div id="page-sops" class="page-content">
-<section id="sops" class="mb-12">
-<h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Trooper SOPs</h2>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="sop-container"></div>
-</section>
-</div>
+    <!-- SOPs Page -->
+    <div id="page-sops" class="page-content">
+        <section id="sops" class="mb-12">
+            <h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Trooper Standard Operating Procedures</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- SOP Cards injected by JS -->
+            </div>
+        </section>
+    </div>
 
-<!-- Regulations -->
-<div id="page-regulations" class="page-content">
-<section id="regulations" class="mb-12">
-<h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Equipment & Vehicle Regulations</h2>
-<div class="grid lg:grid-cols-3 gap-6">
-<div class="card p-6 cursor-pointer hover:bg-gray-50" onclick="openModal('vehicleModal')">
-<h3 class="text-xl font-orbitron text-gray-700 mb-2">Vehicle Regulations</h3>
-<p class="text-gray-600">Click to view full vehicle regulations.</p>
-</div>
-<div class="card p-6 cursor-pointer hover:bg-gray-50" onclick="openModal('weaponModal')">
-<h3 class="text-xl font-orbitron text-gray-700 mb-2">Weapon Regulations</h3>
-<p class="text-gray-600">Click to view full weapon regulations.</p>
-</div>
-<div class="card p-6 cursor-pointer hover:bg-gray-50" onclick="openModal('uniformModal')">
-<h3 class="text-xl font-orbitron text-gray-700 mb-2">Uniform Regulations</h3>
-<p class="text-gray-600">Click to view full uniform standards.</p>
-</div>
-</div>
-</section>
-</div>
+    <!-- Regulations Page -->
+    <div id="page-regulations" class="page-content">
+        <section id="regulations" class="mb-12">
+            <h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Equipment & Vehicle Regulations</h2>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-2xl font-orbitron text-gray-700 mb-4">Vehicle Regulations</h3>
+                    <button class="btn-show-modal bg-blue-600 text-white px-4 py-2 rounded" data-target="modal-vehicles">View ISP Vehicle Regulations</button>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-2xl font-orbitron text-gray-700 mb-4">Weapon Regulations</h3>
+                    <button class="btn-show-modal bg-red-600 text-white px-4 py-2 rounded" data-target="modal-weapons">View ISP Weapon & Uniform Regulations</button>
+                </div>
+            </div>
+        </section>
+    </div>
 
-<!-- COC -->
-<div id="page-coc" class="page-content">
-<section id="coc" class="mb-12">
-<h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Idaho State Patrol - Chain of Command</h2>
-<div class="card p-6 space-y-4">
-<div class="flex items-center space-x-4">
-<img src="Wildfox5438.png" class="w-20 h-20 rounded-full border-2 border-yellow-500" alt="Colonel Wildfox5438">
-<div>
-<p class="font-semibold">Colonel - Wildfox5438</p>
-<p>@𝗥𝗠𝗦𝗣 • Colonel - RP-100</p>
-</div>
-</div>
-<hr>
-<p>Lieutenant Colonel - @𝗥𝗠𝗦𝗣 • Lieutenant Colonel - RP-101 | Wildfox1365</p>
-<p>Major - @𝗥𝗠𝗦𝗣 • Major - RP-102 | ghgdbffbf, Spots open</p>
-<p>Captain - @𝗥𝗠𝗦𝗣 • Captain</p>
-<p>Lieutenant - @𝗥𝗠𝗦𝗣 • Lieutenant</p>
-<p>Sergeant - @𝗥𝗠𝗦𝗣 • Sergeant</p>
-<p>Corporal - @𝗥𝗠𝗦𝗣 • Corporal</p>
-<p>Trooper First Class - @𝗥𝗠𝗦𝗣 • Trooper First Class</p>
-<p>Trooper - @𝗥𝗠𝗦𝗣 • Trooper</p>
-<p>Probationary Trooper - @𝗥𝗠𝗦𝗣 • Probationary Trooper</p>
-</div>
-</section>
-</div>
+    <!-- Codes Page -->
+    <div id="page-codes" class="page-content">
+        <section id="codes" class="mb-12">
+            <h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Oakwood County Codes</h2>
+            <div class="card p-6">
+                <div id="accordion-container"></div>
+            </div>
+        </section>
+    </div>
 
-<!-- Codes -->
-<div id="page-codes" class="page-content">
-<section id="codes" class="mb-12">
-<h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Idaho State</h2>
-<div class="card p-6">
-<div id="accordion-container"></div>
-</div>
-</section>
-</div>
+    <!-- Miranda Page -->
+    <div id="page-miranda" class="page-content">
+        <section id="miranda" class="mb-12">
+            <div class="card p-6 md:p-8">
+                <h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-4">Miranda Rights/Warning</h2>
+                <div class="space-y-3 text-gray-600">
+                    <p><strong>Part 1:</strong> You have the right to remain silent.</p>
+                    <p><strong>Part 2:</strong> Anything you say can and will be used against you in a court of law.</p>
+                    <p><strong>Part 3:</strong> You have the right to talk to a lawyer and have him present with you while you are being questioned.</p>
+                    <p><strong>Part 4:</strong> If you cannot afford to hire a lawyer, one will be appointed to represent you before any questioning if you wish.</p>
+                    <p><strong>Part 5:</strong> You can decide at any time to exercise these rights and not answer any questions or make any statements.</p>
+                    <hr class="my-4">
+                    <p><strong>Part 6:</strong> Do you understand each of these rights I have explained to you? Having these rights in mind, do you wish to talk to us now?</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
-<!-- Miranda -->
-<div id="page-miranda" class="page-content">
-<section id="miranda" class="mb-12">
-<div class="card p-6 md:p-8">
-<h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-4 border-b-2 border-yellow-500 pb-2">Miranda Rights</h2>
-<p class="text-gray-700">You have the right to remain silent. Anything you say can be used against you in a court of law. You have the right to an attorney. If you cannot afford an attorney, one will be provided for you.</p>
-</div>
-</section>
-</div>
+    <!-- COC Page -->
+    <div id="page-coc" class="page-content">
+        <section id="coc" class="mb-12">
+            <h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Rivermont State Patrol - Chain of Command</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card p-6">
+                    <p><strong>Colonel - Wildfox5438</strong></p>
+                    <img src="Wildfox5438.png" alt="Wildfox5438" class="mt-4 rounded shadow">
+                </div>
+                <div class="card p-6">
+                    <p><strong>Lieutenant Colonel</strong> - Wildfox1365</p>
+                    <p>Major - ghgdbffbf (Spots open)</p>
+                    <p>Captain</p>
+                    <p>Lieutenant</p>
+                    <p>Sergeant</p>
+                    <p>Corporal</p>
+                    <p>Trooper First Class</p>
+                    <p>Trooper</p>
+                    <p>Probationary Trooper</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
 </main>
 
 <!-- Modals -->
-
-<!-- Vehicle Modal -->
-<div id="vehicleModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-<div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-1/2 p-6 relative max-h-[90vh] overflow-y-auto">
-<h3 class="text-2xl font-orbitron font-semibold mb-4">Vehicle Regulations</h3>
-<div class="text-gray-700 space-y-3">
-<h4 class="font-semibold">STANDARD - ISP Livery (REQUIRED)</h4>
-<p><strong>Allowed Roles:</strong> Probationary Trooper, Trooper, Trooper First Class, Corporal</p>
-<p><strong>Allowed Vehicles:</strong> 2015 Bullhorn Prancer Pursuit, 2019 Falcon Interceptor Utility, 2018 Chevlon Camion PPV, 2009 Chevlon Captain, 2019 Chevlon Plattro PPV</p>
-
-<h4 class="font-semibold mt-4">SUPERVISOR - ISP Livery (Undercover Only)</h4>
-<p><strong>Allowed Roles:</strong> Sergeant, Major, Lieutenant, Captain</p>
-<p><strong>Allowed Vehicles:</strong> Same as STANDARD but must use undercover livery</p>
-
-<h4 class="font-semibold mt-4">COMMAND+ Allowed Vehicles</h4>
-<p><strong>Allowed Roles:</strong> Colonel, Lieutenant Colonel, Major</p>
-<p><strong>Permitted Vehicles:</strong> All vehicles + accessories</p>
-
-<h4 class="font-semibold mt-4">Vehicle Regulations</h4>
-<ul class="list-disc ml-5 space-y-1">
-<li>Lightbars: Liberty, Legacy ✅</li>
-<li>Visor Lights: Optional for Corporal+ ✅</li>
-<li>Rear Lights: Spoiler, Rear Window ✅</li>
-<li>Accessories: Fog Lights (Optional) ✅, Wraparound ✅, Push Bar ✅, ALPR (Optional) ✅, Spotlight ✅</li>
-<li>Prohibited: Civilian Horn ❌, Grappler ❌, Wheel Covers ❌</li>
-<li>Plates: Unmarked ✅</li>
-<li>Antennas: Optional ✅</li>
-<li>Siderunners: Small Optional ✅, Full Optional for Corporal+ ✅</li>
-</ul>
-</div>
-<button onclick="closeModal('vehicleModal')" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded">Cancel</button>
-</div>
+<div id="modal-vehicles" class="modal-bg flex flex-col">
+    <div class="bg-white rounded-lg p-6 max-w-3xl mx-auto relative">
+        <h3 class="text-2xl font-orbitron mb-4">STANDARD - ISP Livery (REQUIRED)</h3>
+        <p><strong>Allowed Roles:</strong> Probationary Trooper, Trooper, Trooper First Class, Corporal</p>
+        <p><strong>Allowed Vehicles:</strong></p>
+        <ul>
+            <li>2015 Bullhorn Prancer Pursuit</li>
+            <li>2019 Falcon Interceptor Utility</li>
+            <li>2018 Chevlon Camion PPV</li>
+            <li>2009 Chevlon Captain</li>
+            <li>2019 Chevlon Plattro PPV</li>
+        </ul>
+        <h4 class="mt-4 font-semibold">SUPERVISOR - ISP Livery (Undercover Only)</h4>
+        <p><strong>Allowed Roles:</strong> Sergeant, Major, Lieutenant, Captain</p>
+        <p><strong>Allowed Vehicles:</strong> Same as STANDARD vehicles but undercover livery</p>
+        <h4 class="mt-4 font-semibold">COMMAND+ Allowed Vehicles</h4>
+        <p><strong>Allowed Roles:</strong> Colonel, Lieutenant Colonel, Major</p>
+        <p><strong>Permitted Vehicles:</strong> All vehicles + accessories</p>
+        <button class="close-modal mt-4 bg-gray-800 text-white px-4 py-2 rounded">Close</button>
+    </div>
 </div>
 
-<!-- Weapon Modal -->
-<div id="weaponModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-<div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-1/2 p-6 relative max-h-[90vh] overflow-y-auto">
-<h3 class="text-2xl font-orbitron font-semibold mb-4">Weapon Regulations</h3>
-<div class="text-gray-700 space-y-3">
-<p>All on-duty officers must use approved firearms only. Firearms are issued after proper training or after your first Ride-Along (R/A). Use of non-approved firearms requires approval from Major+ or Division Director.</p>
-<h4 class="font-semibold mt-2">Firearm Authorization</h4>
-<ul class="list-disc ml-5">
-<li>Issuance: Firearms provided after training or first R/A.</li>
-<li>Approval for Non-Issued Weapons: Commander+ or Division Director approval required.</li>
-<li>Division Directors: Must seek firearm approvals from Major+.</li>
-</ul>
-<h4 class="font-semibold mt-2">Patrol Firearm Regulations</h4>
-<p><strong>Primary Weapon:</strong> Glock 17 (Required)</p>
-<p><strong>Secondary Weapon (Trunk Stored):</strong> M4A1 (Vehicle trunk), Fabarm FP6 (Sergeant+)</p>
-<p><strong>Approved Division Weapons:</strong> Glock 17, SIG Sauer P226, M4A1, MP5, SPAS 12 (Sergeant+), Fabarm FP6 (Sergeant+)</p>
-</div>
-<button onclick="closeModal('weaponModal')" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded">Cancel</button>
-</div>
-</div>
-
-<!-- Uniform Modal -->
-<div id="uniformModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-<div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-1/2 p-6 relative max-h-[90vh] overflow-y-auto">
-<h3 class="text-2xl font-orbitron font-semibold mb-4">Uniform Regulations</h3>
-<div class="text-gray-700 space-y-3">
-<h4 class="font-semibold">Uniforms</h4>
-<ul class="list-disc ml-5">
-<li>ISP Class A (Under working)</li>
-<li>ISP Class B (Under working)</li>
-<li>ISP Class C</li>
-<li>Formal (Major+ only)</li>
-</ul>
-<h4 class="font-semibold mt-2">Allowed Hats</h4>
-<ul class="list-disc ml-5">
-<li>Police Baseball Caps (Black only)</li>
-<li>Police Beanies (Black only)</li>
-<li>No Hat (hair or bald)</li>
-</ul>
-<h4 class="font-semibold mt-2">Allowed Eyewear</h4>
-<ul class="list-disc ml-5">
-<li>Shades</li>
-<li>Eye Glasses</li>
-<li>No rainbow lenses or unprofessional styles</li>
-</ul>
-<h4 class="font-semibold mt-2">Duty Belts / Armor / Bodycams</h4>
-<ul class="list-disc ml-5">
-<li>Duty belt: use the one in lockers</li>
-<li>Plate carriers / Body Armor: Black or Dark Blue</li>
-<li>Bodycams: Allowed with command approval</li>
-</ul>
-<p class="mt-2 text-red-600 font-semibold">Failure to comply will result in infractions.</p>
-</div>
-<button onclick="closeModal('uniformModal')" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded">Cancel</button>
-</div>
+<div id="modal-weapons" class="modal-bg flex flex-col">
+    <div class="bg-white rounded-lg p-6 max-w-3xl mx-auto relative overflow-auto max-h-[80vh]">
+        <h3 class="text-2xl font-orbitron mb-4">Weapon & Uniform Regulations</h3>
+        <p>All on-duty officers must use approved firearms only. Use of non-approved firearms requires Major+ approval.</p>
+        <p><strong>Patrol Firearms:</strong></p>
+        <ul>
+            <li>Primary: Glock 17 (Required)</li>
+            <li>Secondary (Trunk Stored): M4A1, Fabarm FP6 (Sergeant+)</li>
+        </ul>
+        <p><strong>Approved Division Weapons:</strong> Glock 17, SIG P226, M4A1, MP5, SPAS 12 (Sergeant+), Fabarm FP6 (Sergeant+)</p>
+        <h4 class="mt-4 font-semibold">Uniform Regulations</h4>
+        <ul>
+            <li>Uniforms: ISP Class A (Under working), Class B, Class C, Formal (Major+ only)</li>
+            <li>Allowed Hats: Police Baseball Caps (Black only), Police Beanies (Black only), No Hat</li>
+            <li>Allowed Eyewear: Shades, Eye Glasses (No rainbow lenses)</li>
+            <li>Duty Belts: Use lockers</li>
+            <li>Plate Carriers/Body Armor: Black or Dark Blue</li>
+            <li>Bodycams: Allowed with command approval</li>
+        </ul>
+        <button class="close-modal mt-4 bg-gray-800 text-white px-4 py-2 rounded">Close</button>
+    </div>
 </div>
 
-<!-- Scripts -->
+<footer class="text-center py-6 bg-gray-800 text-white">
+    <p>&copy; Idaho State Patrol. All Rights Reserved.</p>
+</footer>
+
 <script>
-// Page navigation
-const navLinks = document.querySelectorAll('.nav-link');
-const pages = document.querySelectorAll('.page-content');
-navLinks.forEach(link => {
-    link.addEventListener('click', e => {
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const pageContents = document.querySelectorAll('.page-content');
+
+    function showPage(pageId) {
+        pageContents.forEach(page => page.classList.remove('visible'));
+        navLinks.forEach(link => link.classList.remove('active'));
+        const targetPage = document.getElementById(pageId);
+        if(targetPage) targetPage.classList.add('visible');
+        const targetLink = document.querySelector(`.nav-link[data-target="${pageId}"]`);
+        if(targetLink) targetLink.classList.add('active');
+    }
+
+    navLinks.forEach(link => link.addEventListener('click', e => {
         e.preventDefault();
-        pages.forEach(p => p.classList.remove('visible'));
-        pages.forEach(p => p.style.display='none');
-        const target = document.getElementById(link.dataset.target);
-        target.style.display='block';
-        setTimeout(()=>target.classList.add('visible'),10);
-        navLinks.forEach(l=>l.classList.remove('active'));
-        link.classList.add('active');
+        showPage(link.getAttribute('data-target'));
+    }));
+
+    // SOPs
+    const sops = [
+        { title: 'Chain of Command', content: 'Always follow the chain of command. Obey lawful orders from higher-ranking officers.' },
+        { title: 'General Duties', content: 'Enforce traffic laws, respond to calls, assist other agencies, and file reports.' },
+        { title: 'Conduct', content: 'Stay professional. No FailRP, RDM, VDM, or abuse of powers.' },
+        { title: 'Uniform & Gear', content: 'Full uniform required on duty. Ensure standard gear works before patrol.' },
+        { title: 'Vehicle Rules', content: 'Drive responsibly unless emergency. Use lights/sirens only when needed.' },
+        { title: 'Arrest & Detain', content: 'Must have proper reason for arrest. State charges, cuff, search, and transport safely.' },
+        { title: 'Use of Force', content: 'Start with verbal commands. Use non-lethal first. Lethal only for immediate life threats.' },
+        { title: 'Radio & Comms', content: 'Keep radio clear and professional. Respond to dispatch quickly.' },
+        { title: 'Discipline', content: 'Breaking SOP may result in Warning, Strike, Suspension, or Termination.' }
+    ];
+    const sopContainer = document.querySelector('#sops .grid');
+    sopContainer.innerHTML = sops.map(s => `<div class="card p-6"><h3 class="text-xl font-orbitron text-gray-700 mb-3">${s.title}</h3><p class="text-gray-600">${s.content}</p></div>`).join('');
+
+    // Accordion Codes
+    const accordionData = [
+        { title: 'Oakwood County Penal Code (O.C.P.C.)', content: '<ul><li>§ 19.01 – Criminal Homicide</li><li>§ 22.01 – Assault</li><li>§ 28.03 – Criminal Mischief</li><li>§ 29.02 – Robbery</li><li>§ 30.02 – Burglary</li><li>§ 31.03 – Theft</li><li>§ 38.03 – Resisting Arrest</li><li>§ 46.02 – Unlawful Carrying of a Weapon</li></ul>' },
+        { title: 'Oakwood County Vehicle Code (O.C.V.C.)', content: '<ul><li>§ 545.351 – Speeding</li><li>§ 545.060 – Failure to Maintain a Single Lane</li><li>§ 545.401 – Reckless Driving</li><li>§ 544.007(d) – Running a Red Light</li><li>§ 550.022 – Leaving the Scene of an Accident</li></ul>' },
+        { title: '10-Codes & Response Codes', content: '<p>10-4: Acknowledged, 10-8: In service, 10-20: Location, 10-80: Pursuit in progress. Code 1: Normal response, Code 3: Emergency response.</p>' }
+    ];
+    const accordionContainer = document.getElementById('accordion-container');
+    accordionContainer.innerHTML = accordionData.map((item, index) => `
+        <div class="border-b">
+            <div class="accordion-header p-4 flex justify-between items-center">
+                <h4 class="font-semibold text-lg text-gray-700">${item.title}</h4>
+                <span class="accordion-icon text-2xl font-thin transform">+</span>
+            </div>
+            <div class="accordion-content px-4 pb-4 text-gray-600">
+                ${item.content}
+            </div>
+        </div>
+    `).join('');
+
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            if(content.style.maxHeight){
+                content.style.maxHeight = null;
+                icon.textContent = '+';
+            } else {
+                document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+                document.querySelectorAll('.accordion-icon').forEach(i => i.textContent = '+');
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.textContent = '-';
+            }
+        });
     });
-});
 
-// SOPs example
-const sopContainer = document.getElementById('sop-container');
-const sops = [
-    {title:'Patrol Procedures', description:'Step-by-step patrolling procedures for troopers.'},
-    {title:'Traffic Stop SOP', description:'How to properly conduct a traffic stop.'},
-    {title:'Arrest SOP', description:'Procedure for detaining and arresting suspects.'}
-];
-sops.forEach(sop=>{
-    const div = document.createElement('div');
-    div.className='card p-4 cursor-pointer hover:bg-gray-50';
-    div.innerHTML=`<h3 class="font-semibold text-gray-800 mb-2">${sop.title}</h3><p class="text-gray-600">${sop.description}</p>`;
-    sopContainer.appendChild(div);
-});
-
-// Codes accordion example
-const codes = [
-    {title:'10-8', content:'In service.'},
-    {title:'10-7', content:'Out of service.'},
-    {title:'10-4', content:'Acknowledged.'}
-];
-const accordionContainer = document.getElementById('accordion-container');
-codes.forEach(code=>{
-    const div = document.createElement('div');
-    div.className='border-b border-gray-200';
-    div.innerHTML=`<div class="accordion-header flex justify-between items-center p-3"><span>${code.title}</span><span class="accordion-icon">+</span></div><div class="accordion-content p-3 text-gray-700">${code.content}</div>`;
-    accordionContainer.appendChild(div);
-});
-document.querySelectorAll('.accordion-header').forEach(header=>{
-    header.addEventListener('click',()=>{
-        const content=header.nextElementSibling;
-        const icon=header.querySelector('.accordion-icon');
-        if(content.style.maxHeight){
-            content.style.maxHeight=null;
-            icon.style.transform='rotate(0deg)';
-        } else{
-            content.style.maxHeight=content.scrollHeight+'px';
-            icon.style.transform='rotate(45deg)';
-        }
+    // Modals
+    document.querySelectorAll('.btn-show-modal').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.getElementById(btn.getAttribute('data-target')).classList.add('active');
+        });
     });
-});
+    document.querySelectorAll('.close-modal').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.closest('.modal-bg').classList.remove('active');
+        });
+    });
 
-// Modals
-function openModal(id){ document.getElementById(id).classList.remove('hidden'); }
-function closeModal(id){ document.getElementById(id).classList.add('hidden'); }
+    // Show Introduction by default
+    showPage('page-introduction');
+});
 </script>
 
 </body>
 </html>
-
