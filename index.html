@@ -143,37 +143,35 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 
 </main>
 
-<!-- Modals -->
-
 <!-- Vehicle Modal -->
 <div id="vehicleModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
 <div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-1/2 p-6 relative max-h-[90vh] overflow-y-auto">
 <h3 class="text-2xl font-orbitron font-semibold mb-4">Vehicle Regulations</h3>
 <div class="text-gray-700 space-y-3">
 <h4 class="font-semibold">STANDARD - APD Livery (REQUIRED)</h4>
-<p><strong>Allowed Roles:</strong> Probationary Trooper, Trooper, Trooper First Class, Corporal</p>
+<p><strong>Allowed Roles:</strong> @𝗥𝗠𝗦𝗣 • Probationary Trooper, @𝗥𝗠𝗦𝗣 • Trooper, @𝗥𝗠𝗦𝗣 • Trooper First Class, @𝗥𝗠𝗦𝗣 • Corporal</p>
 <p><strong>Allowed Vehicles:</strong> 2015 Bullhorn Prancer Pursuit, 2019 Falcon Interceptor Utility, 2018 Chevlon Camion PPV, 2009 Chevlon Captain, 2019 Chevlon Plattro PPV</p>
 
 <h4 class="font-semibold mt-4">SUPERVISOR - APD Livery (Undercover Only)</h4>
-<p><strong>Allowed Roles:</strong> Sergeant, Major, Lieutenant, Captain</p>
-<p><strong>Allowed Vehicles:</strong> Same as STANDARD but must use undercover livery</p>
+<p><strong>Allowed Roles:</strong> @𝗥𝗠𝗦𝗣 • Sergeant, @𝗥𝗠𝗦𝗣 • Major, @𝗥𝗠𝗦𝗣 • Lieutenant, @𝗥𝗠𝗦𝗣 • Captain</p>
+<p><strong>Allowed Vehicles:</strong> Same as STANDARD listed vehicles, but must use undercover livery</p>
 
 <h4 class="font-semibold mt-4">COMMAND+ Allowed Vehicles</h4>
-<p><strong>Allowed Roles:</strong> Colonel, Lieutenant Colonel, Major</p>
-<p><strong>Permitted Vehicles:</strong> All vehicles + accessories</p>
+<p><strong>Allowed Roles:</strong> @𝗥𝗠𝗦𝗣 • Colonel, @𝗥𝗠𝗦𝗣 • Lieutenant Colonel, @𝗥𝗠𝗦𝗣 • Major</p>
+<p><strong>Permitted Vehicles:</strong> All vehicles + accessories (can use any listed below them)</p>
 
 <h4 class="font-semibold mt-4">Vehicle Regulations</h4>
 <ul class="list-disc ml-5 space-y-1">
-<li>Lightbars: Liberty, Legacy ✅</li>
-<li>Visor Lights: Optional for Corporal+ ✅</li>
-<li>Rear Lights: Spoiler, Rear Window ✅</li>
-<li>Accessories: Fog Lights (Optional) ✅, Wraparound ✅, Push Bar ✅, ALPR (Optional) ✅, Spotlight ✅</li>
-<li>Prohibited: Civilian Horn ❌, Grappler ❌, Wheel Covers ❌</li>
-<li>Plates: Unmarked ✅</li>
-<li>Antennas: Optional ✅</li>
-<li>Siderunners: Small Optional ✅, Full Optional for Corporal+ ✅</li>
+<li>Lightbars: ✅ Liberty, Legacy Lightbars</li>
+<li>Visor Lights: ✅ (@𝗥𝗠𝗦𝗣 • Corporal+)</li>
+<li>Rear Lights: ✅ Spoiler Lights, Rear Window Lights</li>
+<li>Additional Lights: ✅ Optional, any provided options allowed</li>
+<li>Accessories: ✅ Fog Lights (Optional), ✅ Wraparound, ✅ Push Bar, ✅ ALPR (Optional), ✅ Spotlight</li>
+<li>Prohibited: ❌ Civilian Horn, ❌ Grappler, ❌ Wheel Covers</li>
+<li>Plates: ✅ Unmarked Plates</li>
+<li>Antennas: ✅ Optional</li>
+<li>Siderunners: ✅ Small (Optional), ✅ Full (Optional for @𝗥𝗠𝗦𝗣 • Corporal+)</li>
 </ul>
-</div>
 <button onclick="closeModal('vehicleModal')" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded">Cancel</button>
 </div>
 </div>
@@ -184,17 +182,27 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <h3 class="text-2xl font-orbitron font-semibold mb-4">Weapon Regulations</h3>
 <div class="text-gray-700 space-y-3">
 <p>All on-duty officers must use approved firearms only. Firearms are issued after proper training or after your first Ride-Along (R/A). Use of non-approved firearms requires approval from Major+ or Division Director.</p>
+
 <h4 class="font-semibold mt-2">Firearm Authorization</h4>
 <ul class="list-disc ml-5">
 <li>Issuance: Firearms provided after training or first R/A.</li>
 <li>Approval for Non-Issued Weapons: Commander+ or Division Director approval required.</li>
 <li>Division Directors: Must seek firearm approvals from Major+.</li>
 </ul>
+
 <h4 class="font-semibold mt-2">Patrol Firearm Regulations</h4>
 <p><strong>Primary Weapon:</strong> Glock 17 (Required)</p>
-<p><strong>Secondary Weapon (Trunk Stored):</strong> M4A1 (Vehicle trunk), Fabarm FP6 (Sergeant+)</p>
-<p><strong>Approved Division Weapons:</strong> Glock 17, SIG Sauer P226, M4A1, MP5, SPAS 12 (Sergeant+), Fabarm FP6 (Sergeant+)</p>
-</div>
+<p><strong>Secondary Weapon (Trunk Stored):</strong> M4A1 (Stored in vehicle trunk; deploy only in approved situations), Fabarm FP6 (Sergeant+)</p>
+
+<h4 class="font-semibold mt-2">Approved Division Weapons</h4>
+<ul class="list-disc ml-5">
+<li>Glock 17</li>
+<li>SIG Sauer P226</li>
+<li>M4A1</li>
+<li>MP5</li>
+<li>SPAS 12 (Sergeant+)</li>
+<li>Fabarm FP6 (Sergeant+)</li>
+</ul>
 <button onclick="closeModal('weaponModal')" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded">Cancel</button>
 </div>
 </div>
@@ -211,92 +219,75 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>APD Class C</li>
 <li>Formal (Major+ only)</li>
 </ul>
+
 <h4 class="font-semibold mt-2">Allowed Hats</h4>
 <ul class="list-disc ml-5">
 <li>Police Baseball Caps (Black only)</li>
 <li>Police Beanies (Black only)</li>
 <li>No Hat (hair or bald)</li>
 </ul>
+
 <h4 class="font-semibold mt-2">Allowed Eyewear</h4>
 <ul class="list-disc ml-5">
 <li>Shades</li>
 <li>Eye Glasses</li>
 <li>No rainbow lenses or unprofessional styles</li>
 </ul>
-<h4 class="font-semibold mt-2">Duty Belts / Armor / Bodycams</h4>
-<ul class="list-disc ml-5">
-<li>Duty belt: use the one in lockers</li>
-<li>Plate carriers / Body Armor: Black or Dark Blue</li>
-<li>Bodycams: Allowed with command approval</li>
-</ul>
-<p class="mt-2 text-red-600 font-semibold">Failure to comply will result in infractions.</p>
-</div>
+
+<h4 class="font-semibold mt-2">Duty Belts</h4>
+<p>You may use the duty belt found in the lockers.</p>
+
+<h4 class="font-semibold mt-2">Plate Carriers / Body Armor</h4>
+<p>Black or Dark Blue in color</p>
+
+<h4 class="font-semibold mt-2">Bodycams</h4>
+<p>Allowed with command approval.</p>
+
+<p class="mt-2 text-red-600 font-semibold">Failure to comply with these regulations will result in infractions.</p>
 <button onclick="closeModal('uniformModal')" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded">Cancel</button>
 </div>
 </div>
 
-<!-- Scripts -->
 <script>
-// Page navigation
-const navLinks = document.querySelectorAll('.nav-link');
-const pages = document.querySelectorAll('.page-content');
-navLinks.forEach(link => {
+// SOPs Data
+const sops = [
+    { title: "Trooper SOP – Chain of Command", description: "Always follow the chain of command.\nObey lawful orders from higher-ranking officers.\nDisrespect or disobedience will result in discipline." },
+    { title: "Trooper SOP – General Duties", description: "Enforce traffic laws and maintain highway safety.\nRespond to accidents, crimes, and emergency calls.\nAssist local law enforcement when needed.\nAlways file reports after incidents." },
+    { title: "Trooper SOP – Conduct", description: "Stay professional and respectful at all times.\nNo FailRP, RDM, VDM, or abuse of powers.\nAlways roleplay actions properly (e.g., -cuffs- before cuffing).\nBodycam/Dashcam must be on if server requires it." },
+    { title: "Trooper SOP – Uniform & Gear", description: "Full Trooper uniform must be worn on duty.\nStandard gear: radio, firearm, taser, handcuffs, flashlight, vest, issued vehicle.\nMake sure all equipment is working before patrol." },
+    { title: "Trooper SOP – Vehicle Rules", description: "Drive responsibly unless in pursuit/emergency.\nLights/sirens only when needed.\nEnd pursuits if ordered by higher-up or if unsafe." },
+    { title: "Trooper SOP – Arrest & Detain", description: "Must have proper reason before arresting.\nAlways state charges to the suspect.\nCuff, search, and transport safely.\nRead rights if required by server rules.\nFile an incident report." },
+    { title: "Trooper SOP – Use of Force", description: "Start with verbal commands.\nUse taser or non-lethal first if possible.\nFirearm/lethal only if life is in immediate danger.\nReport all uses of force." },
+    { title: "Trooper SOP – Radio & Comms", description: "Keep radio clear and professional.\nUse unit call signs (e.g., 2-45 on scene).\nRespond to dispatch quickly." },
+    { title: "Trooper SOP – Discipline", description: "Breaking SOP may result in:\nWarning\nStrike\nSuspension\nTermination\nFailure to comply with this SOP will result in disciplinary action." }
+];
+
+// Render SOP Cards
+const sopContainer = document.getElementById('sop-container');
+sops.forEach(sop => {
+    const card = document.createElement('div');
+    card.className = "card p-6 cursor-pointer";
+    card.innerHTML = `<h3 class="text-xl font-orbitron font-semibold mb-2">${sop.title}</h3><p class="text-gray-600 whitespace-pre-line">${sop.description}</p>`;
+    sopContainer.appendChild(card);
+});
+
+// Modal Functions
+function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+
+// Page Navigation
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
-        pages.forEach(p => p.classList.remove('visible'));
-        pages.forEach(p => p.style.display='none');
-        const target = document.getElementById(link.dataset.target);
-        target.style.display='block';
-        setTimeout(()=>target.classList.add('visible'),10);
-        navLinks.forEach(l=>l.classList.remove('active'));
+        document.querySelectorAll('.page-content').forEach(pc => pc.classList.remove('visible'));
+        document.getElementById(link.dataset.target).classList.add('visible');
+        links.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
     });
 });
-
-// SOPs example
-const sopContainer = document.getElementById('sop-container');
-const sops = [
-    {title:'Patrol Procedures', description:'Step-by-step patrolling procedures for troopers.'},
-    {title:'Traffic Stop SOP', description:'How to properly conduct a traffic stop.'},
-    {title:'Arrest SOP', description:'Procedure for detaining and arresting suspects.'}
-];
-sops.forEach(sop=>{
-    const div = document.createElement('div');
-    div.className='card p-4 cursor-pointer hover:bg-gray-50';
-    div.innerHTML=`<h3 class="font-semibold text-gray-800 mb-2">${sop.title}</h3><p class="text-gray-600">${sop.description}</p>`;
-    sopContainer.appendChild(div);
-});
-
-// Codes accordion example
-const codes = [
-    {title:'10-8', content:'In service.'},
-    {title:'10-7', content:'Out of service.'},
-    {title:'10-4', content:'Acknowledged.'}
-];
-const accordionContainer = document.getElementById('accordion-container');
-codes.forEach(code=>{
-    const div = document.createElement('div');
-    div.className='border-b border-gray-200';
-    div.innerHTML=`<div class="accordion-header flex justify-between items-center p-3"><span>${code.title}</span><span class="accordion-icon">+</span></div><div class="accordion-content p-3 text-gray-700">${code.content}</div>`;
-    accordionContainer.appendChild(div);
-});
-document.querySelectorAll('.accordion-header').forEach(header=>{
-    header.addEventListener('click',()=>{
-        const content=header.nextElementSibling;
-        const icon=header.querySelector('.accordion-icon');
-        if(content.style.maxHeight){
-            content.style.maxHeight=null;
-            icon.style.transform='rotate(0deg)';
-        } else{
-            content.style.maxHeight=content.scrollHeight+'px';
-            icon.style.transform='rotate(45deg)';
-        }
-    });
-});
-
-// Modals
-function openModal(id){ document.getElementById(id).classList.remove('hidden'); }
-function closeModal(id){ document.getElementById(id).classList.add('hidden'); }
+// Show Introduction by default
+document.getElementById('page-introduction').classList.add('visible');
 </script>
 
 </body>
