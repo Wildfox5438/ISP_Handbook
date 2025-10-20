@@ -20,7 +20,7 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 .accordion-header { cursor:pointer; transition: background-color 0.3s ease; }
 .accordion-header:hover { background-color:#e5e7eb; }
 .accordion-content { max-height:0; overflow:hidden; transition:max-height 0.5s ease-in-out; }
-.accordion-icon { transition: transform 0.3s ease; }
+.accordion-icon { transition: transform 0.5s ease; }
 .nav-link.active { color:#FBBF24; border-bottom:2px solid #FBBF24; }
 </style>
 </head>
@@ -71,7 +71,6 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <section id="sops" class="mb-12">
 <h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Trooper SOPs</h2>
 <div class="grid md:grid-cols-1 gap-6">
-
 <div class="card p-4">
 <h3 class="font-semibold text-gray-800 mb-2">Trooper SOP – Chain of Command</h3>
 <ul class="list-disc ml-5 text-gray-700">
@@ -80,7 +79,6 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>Disrespect or disobedience will result in discipline.</li>
 </ul>
 </div>
-
 <div class="card p-4">
 <h3 class="font-semibold text-gray-800 mb-2">Trooper SOP – General Duties</h3>
 <ul class="list-disc ml-5 text-gray-700">
@@ -90,7 +88,6 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>Always file reports after incidents.</li>
 </ul>
 </div>
-
 <div class="card p-4">
 <h3 class="font-semibold text-gray-800 mb-2">Trooper SOP – Conduct</h3>
 <ul class="list-disc ml-5 text-gray-700">
@@ -100,7 +97,6 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>Bodycam/Dashcam must be on if server requires it.</li>
 </ul>
 </div>
-
 <div class="card p-4">
 <h3 class="font-semibold text-gray-800 mb-2">Trooper SOP – Uniform & Gear</h3>
 <ul class="list-disc ml-5 text-gray-700">
@@ -109,7 +105,6 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>Make sure all equipment is working before patrol.</li>
 </ul>
 </div>
-
 <div class="card p-4">
 <h3 class="font-semibold text-gray-800 mb-2">Trooper SOP – Vehicle Rules</h3>
 <ul class="list-disc ml-5 text-gray-700">
@@ -118,7 +113,6 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>End pursuits if ordered by higher-up or if unsafe.</li>
 </ul>
 </div>
-
 <div class="card p-4">
 <h3 class="font-semibold text-gray-800 mb-2">Trooper SOP – Arrest & Detain</h3>
 <ul class="list-disc ml-5 text-gray-700">
@@ -129,7 +123,6 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>File an incident report.</li>
 </ul>
 </div>
-
 <div class="card p-4">
 <h3 class="font-semibold text-gray-800 mb-2">Trooper SOP – Use of Force</h3>
 <ul class="list-disc ml-5 text-gray-700">
@@ -139,7 +132,6 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>Report all uses of force.</li>
 </ul>
 </div>
-
 <div class="card p-4">
 <h3 class="font-semibold text-gray-800 mb-2">Trooper SOP – Radio & Comms</h3>
 <ul class="list-disc ml-5 text-gray-700">
@@ -148,19 +140,20 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>Respond to dispatch quickly.</li>
 </ul>
 </div>
-
 <div class="card p-4">
 <h3 class="font-semibold text-gray-800 mb-2">Trooper SOP – Discipline</h3>
 <ul class="list-disc ml-5 text-gray-700">
-<li>Breaking SOP may result in:</li>
+<li>Breaking SOP may result in:
+<ul class="list-disc ml-5">
 <li>Warning</li>
 <li>Strike</li>
 <li>Suspension</li>
 <li>Termination</li>
+</ul>
+</li>
 <li>Failure to comply with this SOP will result in disciplinary action.</li>
 </ul>
 </div>
-
 </div>
 </section>
 </div>
@@ -169,63 +162,83 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <div id="page-regulations" class="page-content">
 <section id="regulations" class="mb-12">
 <h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Equipment & Vehicle Regulations</h2>
-<div class="grid lg:grid-cols-3 gap-6">
-<div class="card p-6 cursor-pointer hover:bg-gray-50" onclick="openModal('vehicleModal')">
+<div class="grid md:grid-cols-1 gap-6">
+<div class="card p-6">
 <h3 class="text-xl font-orbitron text-gray-700 mb-2">Vehicle Regulations</h3>
-<p class="text-gray-600">Click to view full vehicle regulations.</p>
+<ul class="list-disc ml-5 text-gray-700">
+<li>STANDARD - APD Livery (REQUIRED)
+<ul class="list-disc ml-5">
+<li>Allowed Roles: @𝗥𝗠𝗦𝗣 • Probationary Trooper, @𝗥𝗠𝗦𝗣 • Trooper, @𝗥𝗠𝗦𝗣 • Trooper First Class, @𝗥𝗠𝗦𝗣 • Corporal</li>
+<li>Allowed Vehicles: 2015 Bullhorn Prancer Pursuit, 2019 Falcon Interceptor Utility, 2018 Chevlon Camion PPV, 2009 Chevlon Captain, 2019 Chevlon Plattro PPV</li>
+</ul>
+</li>
+<li>SUPERVISOR - APD Livery (Undercover Only)
+<ul class="list-disc ml-5">
+<li>Allowed Roles: @𝗥𝗠𝗦𝗣 • Sergeant, @𝗥𝗠𝗦𝗣 • Major, @𝗥𝗠𝗦𝗣 • Lieutenant, @𝗥𝗠𝗦𝗣 • Captain</li>
+<li>Allowed Vehicles: Same as STANDARD listed vehicles, but must use undercover livery</li>
+</ul>
+</li>
+<li>COMMAND+ Allowed Vehicles
+<ul class="list-disc ml-5">
+<li>Allowed Roles: @𝗥𝗠𝗦𝗣 • Colonel, @𝗥𝗠𝗦𝗣 • Lieutenant Colonel, @𝗥𝗠𝗦𝗣 • Major</li>
+<li>Permitted Vehicles: All vehicles + accessories</li>
+</ul>
+</li>
+<li>Vehicle Regulations Details
+<ul class="list-disc ml-5">
+<li>Lightbars: ✅ Liberty, Legacy; ✅ Visor Lights (Corporal+)</li>
+<li>Rear Lights: ✅ Spoiler, Rear Window</li>
+<li>Accessories: ✅ Fog Lights (Optional), ✅ Wraparound, ✅ Push Bar, ✅ ALPR (Optional), ✅ Spotlight</li>
+<li>Prohibited: ❌ Civilian Horn, ❌ Grappler, ❌ Wheel Covers</li>
+<li>Plates: ✅ Unmarked</li>
+<li>Antennas: ✅ Optional</li>
+<li>Siderunners: ✅ Small (Optional), ✅ Full (Optional for Corporal+)</li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="card p-6 cursor-pointer hover:bg-gray-50" onclick="openModal('weaponModal')">
+<div class="card p-6">
 <h3 class="text-xl font-orbitron text-gray-700 mb-2">Weapon Regulations</h3>
-<p class="text-gray-600">Click to view full weapon regulations.</p>
+<ul class="list-disc ml-5 text-gray-700">
+<li>All on-duty officers must use approved firearms only. Firearms are issued after proper training or after your first Ride-Along (R/A). Use of non-approved firearms requires approval from Major+ or Division Director.</li>
+<li>Firearm Authorization:
+<ul class="list-disc ml-5">
+<li>Issuance: Firearms provided after training or first R/A.</li>
+<li>Approval for Non-Issued Weapons: Commander+ or Division Director approval required.</li>
+<li>Division Directors: Must seek firearm approvals from Major+.</li>
+</ul>
+</li>
+<li>Patrol Firearm Regulations:
+<ul class="list-disc ml-5">
+<li>Primary Weapon: Glock 17 (Required)</li>
+<li>Secondary Weapon (Trunk Stored): M4A1 (Vehicle trunk), Fabarm FP6 (Sergeant+)</li>
+<li>Approved Division Weapons: Glock 17, SIG Sauer P226, M4A1, MP5, SPAS 12 (Sergeant+), Fabarm FP6 (Sergeant+)</li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="card p-6 cursor-pointer hover:bg-gray-50" onclick="openModal('uniformModal')">
+<div class="card p-6">
 <h3 class="text-xl font-orbitron text-gray-700 mb-2">Uniform Regulations</h3>
-<p class="text-gray-600">Click to view full uniform standards.</p>
+<ul class="list-disc ml-5 text-gray-700">
+<li>Uniforms: APD Class A, APD Class B, APD Class C, Formal (Major+ only)</li>
+<li>Allowed Hats: Police Baseball Caps (Black only), Police Beanies (Black only), No Hat (hair or bald)</li>
+<li>Allowed Eyewear: Shades, Eye Glasses, No rainbow lenses/unprofessional styles</li>
+<li>Duty Belts: Use the duty belt found in lockers</li>
+<li>Plate Carriers / Body Armor: Black or Dark Blue</li>
+<li>Bodycams: Allowed with command approval</li>
+<li class="text-red-600 font-semibold">Failure to comply with these regulations will result in infractions.</li>
+</ul>
 </div>
 </div>
 </section>
 </div>
 
-<!-- COC -->
-<div id="page-coc" class="page-content">
-<section id="coc" class="mb-12">
-<h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Rivermont State Patrol - Chain of Command</h2>
-<div class="card p-6 space-y-4">
-<div class="flex items-center space-x-4">
-<img src="Wildfox5438.png" class="w-20 h-20 rounded-full border-2 border-yellow-500" alt="Colonel Wildfox5438">
-<div>
-<p class="font-semibold">Colonel - Wildfox5438</p>
-<p>@𝗥𝗠𝗦𝗣 • Colonel - RP-100</p>
-</div>
-</div>
-<hr>
-<p>Lieutenant Colonel - @𝗥𝗠𝗦𝗣 • Lieutenant Colonel - RP-101 | Wildfox1365</p>
-<p>Major - @𝗥𝗠𝗦𝗣 • Major - RP-102 | ghgdbffbf, Spots open</p>
-<p>Captain - @𝗥𝗠𝗦𝗣 • Captain</p>
-<p>Lieutenant - @𝗥𝗠𝗦𝗣 • Lieutenant</p>
-<p>Sergeant - @𝗥𝗠𝗦𝗣 • Sergeant</p>
-<p>Corporal - @𝗥𝗠𝗦𝗣 • Corporal</p>
-<p>Trooper First Class - @𝗥𝗠𝗦𝗣 • Trooper First Class</p>
-<p>Trooper - @𝗥𝗠𝗦𝗣 • Trooper</p>
-<p>Probationary Trooper - @𝗥𝗠𝗦𝗣 • Probationary Trooper</p>
-</div>
-</section>
-</div>
-
-<!-- Codes -->
+<!-- 10-Codes -->
 <div id="page-codes" class="page-content">
 <section id="codes" class="mb-12">
 <h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Oakwood County 10-Codes & Response Codes</h2>
-<div class="card p-6">
-<div id="accordion-container" class="space-y-2">
-
-<!-- Accordion Items (General Communication, Location & Status, etc.) -->
-<div class="border rounded-lg overflow-hidden">
-<button class="accordion-header w-full text-left px-4 py-3 flex justify-between items-center bg-gray-100 font-semibold">
-  General Communication
-  <span class="accordion-icon transform transition-transform">&#9654;</span>
-</button>
-<div class="accordion-content px-4 py-2 text-gray-700">
+<div class="card p-6 text-gray-700 space-y-4">
+<h3 class="font-semibold text-xl">General Communication</h3>
 <ul class="list-disc ml-5">
 <li>10-1 – Signal weak / Can’t copy</li>
 <li>10-2 – Signal good</li>
@@ -238,15 +251,8 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>10-10 – Negative</li>
 <li>10-19 – Return to station</li>
 </ul>
-</div>
-</div>
 
-<div class="border rounded-lg overflow-hidden">
-<button class="accordion-header w-full text-left px-4 py-3 flex justify-between items-center bg-gray-100 font-semibold">
-  Location & Status
-  <span class="accordion-icon transform transition-transform">&#9654;</span>
-</button>
-<div class="accordion-content px-4 py-2 text-gray-700">
+<h3 class="font-semibold text-xl mt-4">Location & Status</h3>
 <ul class="list-disc ml-5">
 <li>10-20 – Location</li>
 <li>10-21 – Call by phone</li>
@@ -259,15 +265,8 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>10-28 – Vehicle registration check</li>
 <li>10-29 – Wanted/stolen check</li>
 </ul>
-</div>
-</div>
 
-<div class="border rounded-lg overflow-hidden">
-<button class="accordion-header w-full text-left px-4 py-3 flex justify-between items-center bg-gray-100 font-semibold">
-  Officer Safety / Emergency
-  <span class="accordion-icon transform transition-transform">&#9654;</span>
-</button>
-<div class="accordion-content px-4 py-2 text-gray-700">
+<h3 class="font-semibold text-xl mt-4">Officer Safety / Emergency</h3>
 <ul class="list-disc ml-5">
 <li>10-31 – Crime in progress</li>
 <li>10-32 – Person with weapon</li>
@@ -278,15 +277,8 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>10-41 – Begin tour of duty</li>
 <li>10-42 – End tour of duty</li>
 </ul>
-</div>
-</div>
 
-<div class="border rounded-lg overflow-hidden">
-<button class="accordion-header w-full text-left px-4 py-3 flex justify-between items-center bg-gray-100 font-semibold">
-  Traffic / Pursuits
-  <span class="accordion-icon transform transition-transform">&#9654;</span>
-</button>
-<div class="accordion-content px-4 py-2 text-gray-700">
+<h3 class="font-semibold text-xl mt-4">Traffic / Pursuits</h3>
 <ul class="list-disc ml-5">
 <li>10-50 – Traffic accident (F = Fatal / PI = Injury / PD = Property Damage)</li>
 <li>10-51 – Tow truck needed</li>
@@ -298,15 +290,8 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>10-80 – Pursuit in progress</li>
 <li>10-95 – Suspect in custody</li>
 </ul>
-</div>
-</div>
 
-<div class="border rounded-lg overflow-hidden">
-<button class="accordion-header w-full text-left px-4 py-3 flex justify-between items-center bg-gray-100 font-semibold">
-  Response Codes
-  <span class="accordion-icon transform transition-transform">&#9654;</span>
-</button>
-<div class="accordion-content px-4 py-2 text-gray-700">
+<h3 class="font-semibold text-xl mt-4">Response Codes</h3>
 <ul class="list-disc ml-5">
 <li>Code 1 – Respond normal, no lights or sirens</li>
 <li>Code 2 – Respond urgent, lights only</li>
@@ -318,49 +303,73 @@ body { font-family: 'Roboto', sans-serif; background-color: #f0f2f5; }
 <li>Code 8 – Restroom break</li>
 </ul>
 </div>
+</section>
 </div>
 
-</div>
+<!-- Chain of Command -->
+<div id="page-coc" class="page-content">
+<section id="coc" class="mb-12">
+<h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Chain of Command</h2>
+<div class="card p-6 text-gray-700 space-y-2">
+<p><strong>Trooper</strong> – First Rank</p>
+<p><strong>Corporal</strong> – Supervises troopers</p>
+<p><strong>Sergeant</strong> – Mid-level leadership</p>
+<p><strong>Lieutenant</strong> – Division lead</p>
+<p><strong>Captain</strong> – Section lead</p>
+<p><strong>Major</strong> – Command staff</p>
+<p><strong>Colonel</strong> – Division head</p>
 </div>
 </section>
 </div>
 
+<!-- Miranda -->
+<div id="page-miranda" class="page-content">
+<section id="miranda" class="mb-12">
+<h2 class="text-3xl font-orbitron font-semibold text-gray-800 mb-6 text-center">Miranda Rights / Warning</h2>
+<div class="card p-6 space-y-4 text-gray-700">
+<p>📜 You have the right to remain silent.</p>
+<p>Anything you say can and will be used against you in a court of law.</p>
+<p>You have the right to talk to a lawyer and have him present with you while you are being questioned.</p>
+<p>If you cannot afford to hire a lawyer, one will be appointed to represent you before any questioning if you wish.</p>
+<p>You can decide at any time to exercise these rights and not answer any questions or make any statements.</p>
+<p>Do you understand each of these rights I have explained to you? Having these rights in mind, do you wish to talk to us now?</p>
+<hr>
+<h3 class="font-semibold">Parts</h3>
+<ol class="list-decimal ml-5">
+<li>You have the right to remain silent.</li>
+<li>Anything you say can and will be used against you in a court of law.</li>
+<li>You have the right to talk to a lawyer and have him present with you while you are being questioned.</li>
+<li>If you cannot afford to hire a lawyer, one will be appointed to represent you before any questioning if you wish.</li>
+<li>You can decide at any time to exercise these rights and not answer any questions or make any statements.</li>
+<li>Do you understand each of these rights I have explained to you? Having these rights in mind, do you wish to talk to us now?</li>
+</ol>
+<p class="font-semibold">Standard U.S. Miranda Warnings</p>
+</div>
+</section>
+</div>
+
+</main>
+
 <script>
-// Page navigation
 const links = document.querySelectorAll('.nav-link');
 const pages = document.querySelectorAll('.page-content');
 
 links.forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        pages.forEach(page => page.classList.remove('visible'));
-        const target = document.getElementById(link.dataset.target);
-        target.classList.add('visible');
-        links.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-    });
+link.addEventListener('click', e => {
+e.preventDefault();
+const target = link.getAttribute('data-target');
+pages.forEach(p => p.classList.remove('visible'));
+document.getElementById(target).classList.add('visible');
+
+links.forEach(l => l.classList.remove('active'));
+link.classList.add('active');
+});
 });
 
-// Accordion functionality
-document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const openItem = document.querySelector('.accordion-header.active');
-        if(openItem && openItem !== header){
-            openItem.classList.remove('active');
-            openItem.nextElementSibling.style.maxHeight = null;
-            openItem.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
-        }
-        header.classList.toggle('active');
-        const content = header.nextElementSibling;
-        if(header.classList.contains('active')){
-            content.style.maxHeight = content.scrollHeight + "px";
-            header.querySelector('.accordion-icon').style.transform = 'rotate(90deg)';
-        } else {
-            content.style.maxHeight = null;
-            header.querySelector('.accordion-icon').style.transform = 'rotate(0deg)';
-        }
-    });
-});
+// Show introduction by default
+document.getElementById('page-introduction').classList.add('visible');
+document.querySelector('.nav-link').classList.add('active');
 </script>
+
 </body>
 </html>
