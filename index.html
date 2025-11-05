@@ -12,7 +12,7 @@
       text-align: center;
       margin-top: 80px;
     }
-    input, button {
+    input, button, select {
       padding: 10px;
       border-radius: 10px;
       border: none;
@@ -23,6 +23,7 @@
       background-color: #0078ff;
       color: white;
       cursor: pointer;
+      transition: background-color 0.2s ease;
     }
     button:hover {
       background-color: #005bcc;
@@ -34,15 +35,27 @@
   </style>
 </head>
 <body>
-  <h1>Check Your Gamepass Ownership</h1>
+  <h1>🎮 Roblox Gamepass Ownership Checker</h1>
+  <p>Enter your Roblox username to see if you own the selected gamepass.</p>
+
   <input type="text" id="username" placeholder="Enter your Roblox username">
+
+  <!-- Optional: multiple gamepass selection -->
+  <select id="gamepassId">
+    <option value="107870591">🍳 It's Breakfast O'clock</option>
+    <!-- You can add more gamepasses here -->
+    <!-- <option value="123456789">🚗 Super Car Pack</option> -->
+    <!-- <option value="987654321">🏠 Premium House Access</option> -->
+  </select>
+
   <button onclick="checkGamepass()">Check</button>
+
   <div id="result"></div>
 
   <script>
     async function checkGamepass() {
       const username = document.getElementById('username').value.trim();
-      const gamepassId = '107870591'; // You can change or duplicate this for multiple gamepasses
+      const gamepassId = document.getElementById('gamepassId').value;
       const resultDiv = document.getElementById('result');
       
       if (!username) {
@@ -53,10 +66,12 @@
       resultDiv.innerHTML = '⏳ Checking...';
 
       try {
-        const res = await fetch(`https://roblox-proxy-px3p.onrender.com/ownsGamepass?username=${username}&gamepassId=${gamepassId}`);
+        const res = await fetch(`https://roblox-proxy-px3p.onrender.com/api/ownership?username=${username}&gamepassId=${gamepassId}`);
         const data = await res.json();
 
-        if (data.ownsGamepass) {
+        if (data.error) {
+          resultDiv.innerHTML = `⚠️ ${data.error}`;
+        } else if (data.owned) {
           resultDiv.innerHTML = `✅ ${username} owns this gamepass!`;
         } else {
           resultDiv.innerHTML = `❌ ${username} does not own this gamepass.`;
