@@ -1,109 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gamepass Ownership Checker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox Gamepass Check</title>
   <style>
     body {
-      background: #0f172a;
+      background-color: #0e0e0e;
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
+      margin-top: 80px;
     }
-    input {
+    input, button {
       padding: 10px;
-      font-size: 16px;
-      border-radius: 8px;
+      border-radius: 10px;
       border: none;
-      width: 250px;
-      text-align: center;
-      margin-top: 20px;
+      outline: none;
+      margin: 5px;
     }
     button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: none;
-      background: #2563eb;
+      background-color: #0078ff;
       color: white;
       cursor: pointer;
-      margin-left: 10px;
     }
     button:hover {
-      background: #1e40af;
+      background-color: #005bcc;
     }
     #result {
-      margin-top: 30px;
-      font-size: 20px;
+      margin-top: 20px;
+      font-size: 1.2em;
     }
   </style>
 </head>
 <body>
-  <h1>Roblox Gamepass Ownership Checker</h1>
-  <p>Enter your Roblox username below to check if you own the Gamepass "<b>it's breakfast o'clock</b>"</p>
-  
-  <input type="text" id="username" placeholder="Enter Roblox username" />
-  <button onclick="checkOwnership()">Check Ownership</button>
-  
+  <h1>Check Your Gamepass Ownership</h1>
+  <input type="text" id="username" placeholder="Enter your Roblox username">
+  <button onclick="checkGamepass()">Check</button>
   <div id="result"></div>
-  
+
   <script>
-    const gamepassId = "107870591"; // Your Gamepass ID
-
-    async function checkOwnership() {
-      const username = document.getElementById("username").value.trim();
-      const resultDiv = document.getElementById("result");
-      resultDiv.textContent = "Checking...";
-
+    async function checkGamepass() {
+      const username = document.getElementById('username').value.trim();
+      const gamepassId = '107870591'; // You can change or duplicate this for multiple gamepasses
+      const resultDiv = document.getElementById('result');
+      
       if (!username) {
-        resultDiv.textContent = "⚠️ Please enter a username.";
+        resultDiv.innerHTML = '⚠️ Please enter a username.';
         return;
       }
 
+      resultDiv.innerHTML = '⏳ Checking...';
+
       try {
-        // Step 1: Get User ID from Username
-        const userResponse = await fetch(`https://users.roblox.com/v1/usernames/users`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ usernames: [username] })
-        });
-        const userData = await userResponse.json();
+        const res = await fetch(`https://roblox-proxy-px3p.onrender.com/ownsGamepass?username=${username}&gamepassId=${gamepassId}`);
+        const data = await res.json();
 
-        if (!userData.data || userData.data.length === 0) {
-          resultDiv.textContent = "❌ Username not found.";
-          return;
-        }
-
-        const userId = userData.data[0].id;
-
-        // Step 2: Check Gamepass Ownership
-        const ownershipUrl = `https://inventory.roblox.com/v1/users/${userId}/items/GamePass/${gamepassId}`;
-        const ownershipResponse = await fetch(ownershipUrl);
-        
-        if (ownershipResponse.ok) {
-          const data = await ownershipResponse.json();
-          if (data && data.data && data.data.length > 0) {
-            resultDiv.textContent = "✅ You own this Gamepass!";
-          } else {
-            resultDiv.textContent = "❌ You do not own this Gamepass.";
-          }
-        } else if (ownershipResponse.status === 404) {
-          resultDiv.textContent = "❌ You do not own this Gamepass.";
+        if (data.ownsGamepass) {
+          resultDiv.innerHTML = `✅ ${username} owns this gamepass!`;
         } else {
-          resultDiv.textContent = "⚠️ Unable to check ownership. Try again later.";
+          resultDiv.innerHTML = `❌ ${username} does not own this gamepass.`;
         }
-
       } catch (err) {
         console.error(err);
-        resultDiv.textContent = "⚠️ Error connecting to Roblox API.";
+        resultDiv.innerHTML = '⚠️ Error connecting to server.';
       }
     }
   </script>
-
-  <footer style="margin-top:40px; opacity:0.7; font-size:14px;">
-    © 2025 Wildfox5438. All rights reserved. This site is for demonstration only.
-  </footer>
 </body>
 </html>
